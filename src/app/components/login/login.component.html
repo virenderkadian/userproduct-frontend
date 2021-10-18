@@ -1,0 +1,24 @@
+
+<form (ngSubmit)="onSubmit()" class="border rounded m-auto p-4 shadow-lg mt-4 needs-validation" novalidate style="width: 40%; min-width: 300px;display: grid; background-color: rgb(236, 227, 186);">
+    <h2 class="m-auto">Admin Login</h2>
+    <small class="danger" style="color:red; text-align: start;">{{msg}}</small>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" type="email"
+      [(ngModel)]="email" required  name="email" [matAutocomplete]="auto"  >
+      <mat-autocomplete #auto="matAutocomplete" >
+        <mat-option  [value]=email (click)="display(email)">
+          {{email}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password"
+      [(ngModel)]="password"  required name="password"  >
+    </mat-form-field>
+    <div>
+        <button type="submit" class="btn btn-success p-1 mb-2 ">Log in</button>
+        <a type="button" class="btn btn-warning p-1 mb-2 ms-3 " routerLink="/register">Register</a>
+    </div>
+</form>

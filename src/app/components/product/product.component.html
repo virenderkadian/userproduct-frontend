@@ -1,0 +1,49 @@
+<div class="col-md-4 text-left">   
+    <button type="button" class="btn btn-primary mt-5 mb-5 " data-bs-toggle="modal" data-bs-target="#ProductModal">
+        Add Product
+    </button>
+</div> 
+  
+  <!-- Modal -->
+  <form (ngSubmit)="onSubmit()">
+  <div class="modal fade" id="ProductModal" tabindex="-1" aria-labelledby="ProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+                <div class="container mb-3" >
+                    <div class="form-group col">
+                        <input type="text" 
+                            class="form-control" 
+                            [(ngModel)]="productname" 
+                            name="productname" 
+                            id="productname" 
+                            placeholder="Product">
+                    </div>
+                    <app-images ></app-images>
+                   
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button 
+                type="submit" 
+                class="btn btn-success " >
+                Upload
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="display-body">
+    <app-display-product></app-display-product>
+</div>

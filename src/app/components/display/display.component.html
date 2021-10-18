@@ -1,0 +1,43 @@
+<div class="display">
+    <div class="container-fluid  shadow-lg rounded "style="background-color: rgb(177, 212, 201);">
+        <div class="row ">
+            <div class="col-sm-3 col-3 border  rounded">
+                <div  class="d-flex flex-column" *ngFor ="let detail of details"style=" border-radius:2px" >
+                        <div class="display-detail"
+                            (click)="displayImage(detail.imgByte,detail.userName)" >
+                            {{detail.userName}}
+                        </div>
+                </div>
+            </div>
+                <div class="col-sm-9 col-9 border rounded "  style="background-color:#777777">
+                    <div class="imagedetail" *ngIf="showimage" >
+                        <div class="product-display">
+                            <div>
+                                <img class="imagecss" src="{{displayitem}}">
+                            </div>
+                            <div>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </span>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="imagedetail"   *ngIf="!showimage" >
+                        <div class="product-display">
+                            <div>
+                                <img  class="imagecss"src="{{firstpic}}">
+                            </div>
+                            <div>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

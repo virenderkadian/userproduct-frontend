@@ -1,0 +1,17 @@
+[
+    {
+        "user":"sam",
+        "product": "cat",
+        "image":"image1"
+    },
+    {
+        "user":"vikas",
+        "product": "phone",
+        "image":"image2"
+    },
+    {
+        "user":"puja",
+        "product": "dog",
+        "image":"image3"
+    }
+]

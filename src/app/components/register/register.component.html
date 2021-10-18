@@ -1,0 +1,31 @@
+
+<form (ngSubmit)="onSubmit()" class="border rounded m-auto p-4 shadow-lg mt-4" style="display:grid;width: 40%; min-width: 300px; background-color: rgb(236, 227, 186);">
+    <h2 class="m-auto">Register</h2>
+    <div class="alert alert-success" *ngIf="isRegistered">
+      Your registration is successful!
+    </div>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" type="text"
+      [(ngModel)]="adminName" required  name="adminName"  required >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" type="email"
+      [(ngModel)]="email" required  name="email"  email="true" required >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password"
+      [(ngModel)]="password" required  name="password"  required >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Confirm Password</mat-label>
+      <input matInput placeholder="Confirm Password" type="password"
+      [(ngModel)]="password1" required  name="password1"  required >
+    </mat-form-field>
+    <div>
+        <button type="submit" class="btn btn-success p-1 mb-2 ">Register</button>
+        <a type="button" class="btn btn-warning p-1 mb-2 ms-3 " routerLink="/login"> Log in </a>
+    </div>
+</form>

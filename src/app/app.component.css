@@ -1,0 +1,21 @@
+.form-body{
+    height: auto;
+    width: auto; 
+    margin: auto; 
+    border-radius: 10px;
+    text-align: center;
+    border-color: rgb(236, 236, 236); 
+    
+}
+.display-body{
+    border-color: rgb(160, 158, 158);
+    border: solid rgb(160, 158, 158);
+    background-color:rgb(160, 158, 158);
+    border-width: 1px;
+    width: 650px;
+    min-height: 150px;
+    margin: auto;
+    text-align: left;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}

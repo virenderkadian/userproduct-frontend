@@ -1,0 +1,8 @@
+.imagecss{
+    margin-top: 1%;
+    max-height: 270px; 
+    max-width: 270px; 
+    min-width: auto;
+    min-height: auto;
+    border-radius: 8px;
+}

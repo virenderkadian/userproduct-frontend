@@ -1,0 +1,14 @@
+<div class="button_outer">
+    <div class="btn_upload">
+        <input 
+            type="file" 
+            id="formFile" 
+            name="selectedFile"
+            [(ngModel)]="selectedFile" 
+            id="selectedFile"
+            (change)="selectFile($event)">
+        Upload Image
+    </div>
+    <!-- <div class="processing_bar"></div>
+    <div class="success_box"></div> -->
+</div>

@@ -1,0 +1,69 @@
+<div class="container-fluid" style="background-color: rgb(255, 255, 255);">
+<form [formGroup]="formGroup"  >
+  <mat-form-field appearance="standard" style="min-width:fit-content; width: 350px;">
+    <mat-label>Search</mat-label>
+    <input formControlName="userName" matInput placeholder="Search" type="text"
+    (keydown.enter)="search($event.target.value)" [matAutocomplete]="auto" >
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-autocomplete #auto="matAutocomplete" >
+      <mat-option *ngFor ="let option of filteredOptions" 
+      [value]=option (click)="search(option)">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+</div>
+
+
+<div class="container-fluid m-auto p-auto" style="max-width: 1000px;"> 
+  <div class="row "style="text-align: start;">
+    <h2>
+      <p *ngIf="(!flagU && !flagP); else elseBlock">Search for User/Product</p>
+      <ng-template #elseBlock >Item Found...</ng-template>
+    </h2>
+    <div *ngIf="flagU">
+      <h3>User Detail</h3>
+      <div  style="display: initial;">
+      <div class="col border shadow-lg rounded m-3 p-3"  style=" max-width: fit-content; margin: 1%; background-color:  rgb(177, 212, 201);">
+        
+        <div class="d-flex flex-column ">
+          <img style="max-width: 300px; max-height: 175px;" src="{{searched.imgByte}}"><br>
+
+          <span class="m-auto" style="font-size: large;">{{searched.userName}}</span>
+        </div>  
+      </div>
+      <div class="col-xs-6 m-auto"style="text-align: start; max-width: fit-content; margin-top:3%">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, 
+          quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+      </div>
+      <hr>
+      </div>
+    </div>
+    <div *ngIf="flagP">
+      <h3>Product Detail</h3>
+      <div  style="display: initial;">
+      <div class="col border shadow-lg rounded m-3 p-3"  style=" max-width: fit-content; margin: 1%; background-color:  rgb(177, 212, 201);">
+        
+        <div class="d-flex flex-column ">
+          <img style="max-width: 300px; max-height: 175px;" src="{{searched.imgByte}}"><br>
+
+          <span class="m-auto" style="font-size: large;">{{searched.productName}}</span>
+        </div>  
+      </div>
+      <div class="col-xs-6 m-auto"style="text-align: start; max-width: fit-content; margin-top:3%">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, 
+          quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+      </div>
+      </div>
+      <hr>
+    </div>
+
+  </div>
+</div>
+
+
